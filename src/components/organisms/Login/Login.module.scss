@@ -1,0 +1,54 @@
+@import "../../../styles/baseline/_styles";
+
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 74px;
+
+  @include respond-to($bp-lg) {
+    flex-direction: column;
+  }
+
+  @include respond-to($bp-md) {
+    gap: 27px;
+  }
+}
+
+.img-container {
+  @include respond-to($bp-lg) {
+    max-width: 318px;
+  }
+
+  @include respond-to($bp-md) {
+    max-width: 222px;
+    margin: 0 auto;
+  }
+}
+
+.title-container {
+  max-width: 570px;
+
+  @include respond-to($bp-lg) {
+    max-width: initial;
+  }
+}
+
+.title {
+  margin-bottom: 36px;
+}
+
+.copy {
+  max-width: 347px;
+  margin-bottom: 107px;
+
+  @include respond-to($bp-lg) {
+    max-width: initial;
+    margin-bottom: 40px;
+  }
+}

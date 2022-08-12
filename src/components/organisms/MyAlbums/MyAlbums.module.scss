@@ -1,0 +1,17 @@
+@import "../../../styles/baseline/_styles";
+
+.my-albums {
+  padding: 190px 0;
+}
+
+.slider {
+  margin-top: 100px;
+}
+
+.without-slider {
+  & > div {
+    & > div {
+      justify-content: center;
+    }
+  }
+}

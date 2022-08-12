@@ -1,0 +1,81 @@
+@import "../../../styles/baseline/_styles";
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 41px;
+
+  @include respond-to($bp-md) {
+    gap: 12px;
+  }
+}
+
+.link {
+  transition: $global-transition;
+  font-size: rem-calc(16);
+  line-height: rem-calc(20);
+  color: var(--color-white);
+  font-weight: $semibold;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.line {
+  width: 2px;
+  height: 25px;
+  background-color: var(--color-white);
+}
+
+.btnDarkTheme {
+  cursor: pointer;
+  transition: $global-transition;
+
+  svg {
+    path {
+      fill: var(--color-white);
+      transition: $global-transition;
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill :var(--color-primary);
+      }
+    }
+  }
+}
+
+.logout-container {
+  p {
+    @include respond-to($bp-md) {
+      display: none;
+    }
+  }
+}
+
+.logout {
+  display: none;
+
+  @include respond-to($bp-md) {
+    display: block;
+  }
+
+  svg {
+    path {
+      transition: $global-transition;
+      fill: var(--color-white);
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill :var(--color-primary);
+      }
+    }
+  }
+}

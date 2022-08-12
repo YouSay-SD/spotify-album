@@ -1,0 +1,42 @@
+@import "../../../styles/baseline/_styles";
+
+.header {
+  padding: 31.5px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  @include respond-to($bp-md) {
+    display: none;
+  }
+
+  svg {
+    path {
+      transition: $global-transition;
+      fill: var(--color-white);
+    }
+  }
+}
+
+.logo-mobile {
+  display: none;
+
+  @include respond-to($bp-md) {
+    display: block;
+  }
+
+  svg {
+    path {
+      transition: $global-transition;
+      fill: var(--color-white);
+    }
+  }
+}

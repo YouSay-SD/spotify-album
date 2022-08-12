@@ -1,0 +1,52 @@
+@import "../../../styles/baseline/_styles";
+
+.button {
+  font-size: rem-calc(16);
+  line-height: rem-calc(20);
+  font-weight: $semibold;
+  font-family: $font-primary;
+  cursor: pointer;
+  transition: $global-transition;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
+  &.solid {
+    background-color: $color-primary;
+    padding: 11px 23px;
+    color: $color-black;
+    border-radius: 24px;
+
+    &.secondary {
+      background-color: $color-secondary;
+      color: $color-white;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &.arrow {
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      svg {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  svg {
+    transition: $global-transition;
+    margin-left: 28px;
+
+    path {
+      transition: $global-transition;
+      stroke: var(--color-white);
+    }
+  }
+}

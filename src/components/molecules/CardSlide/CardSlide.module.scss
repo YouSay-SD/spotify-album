@@ -1,0 +1,69 @@
+@import "../../../styles/baseline/_styles";
+
+.card-slide {
+  cursor: pointer;
+  transition: background-color .2s ease;
+  border-radius: 24px;
+  overflow: hidden;
+  width: 100%;
+  min-width: 660px;
+  min-height: 240px;
+
+  @include respond-to($bp-md) {
+    min-width: 500px;
+  }
+
+  @include respond-to($bp-sm) {
+    min-width: 300px;
+  }
+
+  &:hover {
+    .img {
+      opacity: 1;
+    }
+  }
+}
+
+.album-name {
+  margin-bottom: 24px;
+  font-weight: $semibold;
+  color: $color-black;
+}
+
+.published-date {
+  color: $color-black;
+
+  @include respond-to($bp-md) {
+    margin-bottom: 24px;
+  }
+}
+
+.img {
+  width: 100%;
+  height: 241px;
+  position: relative;
+  opacity: 0.8;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: $global-transition;
+  margin-bottom: 24px;
+
+  @include respond-to($bp-md) {
+    height: 220px;
+  }
+}
+
+.active {
+  background-color: var(--color-primary);
+  padding: 24px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.text-container {
+  max-width: 385px;
+}
